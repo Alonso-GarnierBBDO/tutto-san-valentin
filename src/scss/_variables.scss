@@ -1,0 +1,87 @@
+// Fonts
+
+@font-face {
+    font-family: DinotBold;
+    src: url('../assets/fonts/dinot_bold.otf');
+}
+
+@font-face {
+    font-family: MyriadProRegular;
+    src: url('../assets/fonts/myriad_pro_regular.otf');
+}
+
+@font-face {
+    font-family: Nabila;
+    src: url('../assets/fonts/nabila.ttf');
+}
+
+// Animation
+
+@mixin keyframes($name){
+    @keyframes #{$name}{
+        @content;
+    }
+}
+
+@mixin animate($name, $duration, $type, $loop){
+    animation: $name $duration $type $loop;
+}
+
+// Convert px to rem
+
+@function stripUnit($value) {
+    @return $value / ($value * 0 + 1);
+}
+
+@function rem($pxValue) {
+    @return #{stripUnit($pxValue) / stripUnit(16px)}rem;
+}
+
+// Media query
+@mixin bp($point) {
+    @if $point == escritorio {
+        @media (min-width: 1600px) { @content; }
+    }
+
+    @else if $point == laptop {
+        @media (min-width: 1100px) { @content; }
+    }
+
+    @else if $point == tabletMD {
+        @media (min-width: 901px)  { @content; }
+    }
+
+    @else if $point == tablet {
+        @media (min-width: 700px)  { @content; }
+    }
+
+    @else if($point == mobileBIG){
+        @media (min-width: 550px)  { @content; }
+    }
+}
+
+
+// Colors
+
+$color-one: #71130D;
+$color-two: #FCEEDE;
+$color-tercero: #684427;
+$color-cuarto: #F2CBA2;
+$color-quinto: #7B0002;
+$color-seis: #FFF;
+$color-siete: #633510;
+$color-quinto-transparent: #7b00026b;
+$color-ocho: #FFEEDC;
+$color-nueve: #7B0302;
+$color-diez: #EAE1CC;
+$color-once: #750000;
+$color-doce: #971114;
+$color-trece: #F9E6D5;
+$color-catorce: #EC2F35;
+
+// En mobile debe ser un 100% -  50% sin haberle agregado un padding extra al box
+
+// Fonts
+$font-two: DinotBold;
+$font-three: MyriadProRegular;
+$font-four: Nabila;

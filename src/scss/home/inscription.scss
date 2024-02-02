@@ -1,0 +1,312 @@
+.content_inscription{
+
+    //background-color: $color-quinto;
+    padding-top: 0px;
+    // padding-bottom: 45px;
+    position: relative;
+
+    @include bp(laptop){
+        // padding-bottom: 80px;
+    }
+
+    img {
+
+        width: 70%;
+        height: auto;
+        margin-bottom: 40px;
+        max-width: 300px;
+
+    }
+
+    .content{
+
+        width: calc(100% - 30px);
+        margin: auto;
+        text-align: center;
+        text-wrap: balance;
+        font-size: rem(25px);
+        color: $color-cuarto;
+        font-family: $font-two;
+
+        @include bp(tablet){
+            display: grid;
+            grid-template-columns: repeat(2, 50%);
+            align-items: center;
+            margin-top: 30px;
+        }
+
+        @include bp(laptop){
+            max-width: 1200px;
+            grid-template-columns: 40% 60%;
+        }
+
+        @include bp(escritorio){
+            max-width: 1550px;
+        }
+
+
+        p{
+            // margin-bottom: 25px;
+            font-size: rem(25px);
+            text-transform: uppercase;
+
+            @include bp(tablet){
+                font-size: rem(30px);
+            }
+
+            @include bp(laptop){
+                font-size: rem(35px);
+            }
+
+            &:last-of-type{
+                margin-bottom: 0px;
+            }
+
+            strong {
+                font-family: $font-four;
+                font-size: rem(20px);
+                text-transform: initial;
+
+                @include bp(tablet){
+                    font-size: rem(25px);
+                }
+
+                @include bp(laptop){
+                    font-size: rem(35px);
+                }
+
+            }
+
+        }
+
+    }
+
+    .premios{
+
+        margin-top: 40px;
+
+        .menu{
+
+            display: grid;
+            grid-template-columns: calc(25% - 15px) 50% calc(25% - 15px);
+            grid-gap: 15px;
+            align-items: center;
+
+            @include bp(tablet){
+                grid-template-columns: 60% calc(40% - 15px);
+            }
+
+            @include bp(laptop){
+                grid-gap: 0px;
+                grid-template-columns: 60% 40%;
+            }
+
+            img {
+
+                margin: 0px;
+
+            }
+
+            div {
+    
+                display: flex;
+                align-items: center;
+                
+                &:last-of-type{
+                    @include bp(tablet){
+                        display: none;
+                    }
+                }
+    
+                hr{
+                    width: 100%;
+                    height: 1px;
+                    background-color: $color-diez;
+                    border: 0px solid transparent;
+                }
+    
+                img{
+                    width: 28px;
+                    height: auto;
+                }
+    
+            }
+
+            section{
+                background-color: $color-doce;
+                padding: 15px;
+                text-align: center;
+                border-radius: 50px;
+
+                @include bp(tablet){
+                    max-width: 300px;
+                    justify-self: center;
+                    border-radius: 50px;
+                    padding: 10px 50px;
+                    width: calc(90% - 100px);
+                }
+
+                @include bp(laptop){
+                    max-width: 450px;
+                    width: calc(100% - 150px);
+                }
+
+                h3{
+                    color: $color-cuarto;
+                    font-family: $font-two;
+                    font-size: rem(20px);
+                    text-wrap: balance;
+
+                    @include bp(laptop){
+                        font-size: rem(25px);
+                    }
+
+                }
+
+            }
+
+        }
+
+        .menu.two{
+            @include bp(tablet){
+                grid-template-columns: calc(40%) 60% ;
+            }
+
+            div {
+
+                &:first-of-type{
+                    @include bp(tablet){
+                        display: none;
+                    }
+                }
+
+                &:last-of-type{
+                    @include bp(tablet){
+                        display: flex;
+                    }
+                }
+            }
+
+        }
+
+        .all {
+            margin-top: 40px;
+            margin-bottom: 40px;
+            display: flex;
+            flex-flow: column;
+            width: calc(100% - 60px);
+            padding: 0px 30px;
+            row-gap: 40px;
+
+            @include bp(laptop){
+                max-width: 1200px;
+                margin: auto;
+                margin-top: 105px;
+                margin-bottom: 105px;
+                flex-flow: row;
+                grid-gap: 40px;
+                width: 100%;
+                justify-content: space-between;
+                width: 100%;
+                padding: 0px;
+            }
+
+            @include bp(escritorio){
+                max-width: 1550px;
+            }
+
+            .item{
+                padding: 20px;
+                height: 150px;
+                background-size: cover;
+                background-position: center;
+                display: grid;
+                place-items: center;
+                background-color: $color-seis;
+                position: relative;
+
+                @include bp(tablet){
+                    max-width: 500px;
+                    margin: auto;
+                    width: 100%;
+                }
+
+                @include bp(laptop){
+                    width: calc(100% - 40px);
+                }
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    width: 150px;
+                    height: 100px;
+                    z-index: 0;
+                    background-image: url('../../assets/img/lazo_top.png');
+                    background-size: 100% 100%;
+                    top: -8px;
+                    left: -21px;
+                    filter: drop-shadow(4px 6px 4px rgba(0, 0, 0, 0.42))
+                }
+
+                &:nth-of-type(2){
+
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        width: 150px;
+                        height: 100px;
+                        z-index: 0;
+                        background-image: url('../../assets/img/lazo_bottom.png');
+                        background-size: 100% 100%;
+                        bottom: -8px;
+                        right: -21px;
+                        filter: drop-shadow(4px 6px 4px rgba(0, 0, 0, 0.42))
+                    }
+
+                }
+
+
+                p {
+                    text-align: center;
+                    font-family: $font-two;
+                    font-size: rem(20px);
+                    z-index: 1;
+                    text-wrap: balance;
+                    text-transform: uppercase;
+
+                    @include bp(laptop){
+                        font-size: rem(23px);
+                    }
+
+                }
+
+            }
+
+            .item.doble{
+                &::before {
+                    content: "";
+                    position: absolute;
+                    width: 150px;
+                    height: 100px;
+                    z-index: 0;
+                    background-image: url('../../assets/img/lazo_bottom.png');
+                    background-size: 100% 100%;
+                    bottom: -8px;
+                    right: -21px;
+                    filter: drop-shadow(4px 6px 4px rgba(0, 0, 0, 0.42))
+                }
+            }
+
+            // .item.one {
+            //     background-image: url('../../assets/img/box_one.png');
+            // }
+
+            // .item.two {
+            //     background-image: url('../../assets/img/box_two.png');
+            // }
+
+        }
+
+    }
+
+}
