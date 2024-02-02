@@ -17,10 +17,6 @@
         z-index: 0;
         transform: translateY(0px);
 
-        @include bp(laptop){
-            padding-bottom: 0px;
-        }
-        
 
         @include bp(tablet){
             padding: 30px;
@@ -28,6 +24,7 @@
         }
 
         @include bp(laptop){
+            padding-bottom: 0px;
             padding: 0px;
             width: calc(100% - 180px);
         }

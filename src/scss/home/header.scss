@@ -1,13 +1,12 @@
 header{
     min-height: calc(100% - 20px); 
-    width: calc(100% - 60px);
-    //background-image: url('../../assets/img/background_mobile.jpg');
+    width: 100%;
     background-size: cover;
     background-position: center;
     display: flex;
     flex-flow: column;
     align-content: center;
-    padding: 20px 30px;
+    padding: 20px 0px;
     position: relative;
     overflow: hidden;
     align-items: center;
@@ -15,102 +14,16 @@ header{
     padding-bottom: 0px;
 
 
-    @include bp(tablet){
-        //background-image: url('../../assets/img/tutto_background_escritorio.jpg');
-    }
-
-    // &::before{
-        // content: "";
-        // position: absolute;
-        // top: 0%;
-        // left: 0%;
-        // width: 100%;
-        // height: 100%;
-        // background-image: url('../../assets/img/background_header_mobile.png');
-        // background-repeat: no-repeat;
-        // background-size: cover;
-        // background-position: bottom center;
-    // }
-
-    // &::after{
-
-        // content: "";
-        // position: absolute;
-        // top: 0%;
-        // left: 0%;
-        // width: 100%;
-        // height: 100%;
-        // background-image: url('../../assets/img/background_mobile_transparent.png');
-        // background-repeat: no-repeat;
-        // background-size: cover;
-        // background-position: bottom center;
-        // z-index: 3;
-
-        // content: "";
-        // z-index: 5;
-        // position: absolute;
-        // bottom: -120px;
-        // // left: -27.9%;
-        // background-color: $color-quinto;
-        // width: 150%;
-        // height: 150px;
-        // border-radius: 50%;
-        // border: 10px solid $color-cuarto;
-
-        // @include bp(tablet){
-        //     bottom: -150px;
-        //     height: 200px;
-        // }
-
-        // @include bp(tabletMD){
-        //     bottom: -150px;
-        // }
-
-        // @include bp(laptop){
-        //     bottom: -330px;
-        //     height: 400px;
-        // }
-
-    // }
-
     .nav {
     
         width: 100%;
-        display: grid;
-        grid-template-columns: 35% 30% 35%;
+        display: flex;
+        justify-content: center;
         align-items: center;
         z-index: 99;
 
         @include bp(laptop){
             padding-top: 15px;
-            grid-template-columns: 45% 10% 45%;
-        }
-
-        div {
-    
-            display: flex;
-            align-items: center;
-
-            &:first-of-type{
-                transform: translateX(-40px);
-            }
-
-            &:last-of-type{
-                transform: translateX(40px);
-            }
-
-            hr{
-                width: 100%;
-                height: 1px;
-                background-color: $color-diez;
-                border: 0px solid transparent;
-            }
-
-            img{
-                width: 28px;
-                height: auto;
-            }
-
         }
 
         section {
@@ -219,9 +132,13 @@ header{
         justify-content: center;
         align-items: flex-end;
 
+        @include bp(mobileBIG){
+            justify-content: flex-end;
+        }
+
         img {
-            height: 70%;
-            width: auto;
+            height: auto;
+            width: 100%;
             transform: translateY(calc(0px + 40%));
             opacity: 1;
 
@@ -254,6 +171,22 @@ header{
             }
 
             @include animate(chocolateImage, 2.5s, ease, 1);
+
+            @include bp(mobileBIG){
+                width: 80%;
+            }
+
+            @include bp(tablet){
+                width: 65%;
+            }
+
+            @include bp(tabletMD){
+                width: 60%;
+            }
+
+            @include bp(laptop){
+                width: auto;
+            }
 
             @include bp(laptop){
 
@@ -301,13 +234,30 @@ header{
 
     .content{
 
-        @include bp(laptop){
+        position: absolute;
+        height: 85dvh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        left: 0px;
+        top: 0px;
+
+        @include bp(tablet){
             max-width: 1200px;
+            position: relative;
+            height: auto;
+            width: 80%;
+            height: 50dvh;
             margin: auto;
-            width: 100%;
             display: grid;
-            grid-template-columns: 40% 20% 40%;
+            grid-template-columns: 50% 50%;
             margin-top: 100px;
+        }
+
+        @include bp(tabletMD){
+            height: auto;
+            grid-template-columns: 40% 20% 40%;
         }
 
         @include bp(escritorio){
@@ -338,11 +288,19 @@ header{
                     opacity: 1;
                     display: none;
 
-                    @include bp(laptop){
+                    @include bp(tablet){
                         display: block;
                         position: relative;
                         width: 100%;
                         bottom: 0px;
+                    }
+
+                    @include bp(laptop){
+                        width: 100%;
+                    }
+
+                    @include bp(escritorio){
+                        width: 80%;
                     }
 
                     @include keyframes(chocolateImageEscritorio){
@@ -370,11 +328,17 @@ header{
             }
 
             &:nth-of-type(2){
+
                 grid-area: 1 / 3;
+
+                @include bp(tablet){
+                    grid-area: 1 / 1;
+                }
 
                 @include bp(laptop){
 
                     align-items: flex-end;
+                    grid-area: auto;
 
                 }
 
@@ -388,6 +352,10 @@ header{
                 margin: 0px auto;
                 z-index: 3;
         
+                @include bp(tablet){
+                    max-width: 100%;
+                }
+
                 @include bp(laptop){
                     height: rem(250px);
                     width: auto;

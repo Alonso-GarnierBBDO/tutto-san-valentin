@@ -170,6 +170,8 @@
         .menu.two{
             @include bp(tablet){
                 grid-template-columns: calc(40%) 60% ;
+                width: 100vw;
+                overflow: hidden;
             }
 
             div {
