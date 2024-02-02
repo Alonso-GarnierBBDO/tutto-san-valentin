@@ -97,11 +97,16 @@ header{
 
     .wave{
 
-        background-image: url('../../assets/img/background_focus.webp');
+        background-image: url('../../assets/img/background_focus_mobile.webp');
         background-size: cover;
         background-position: center;
 
-        &::before {
+        @include bp(tablet){
+            background-image: url('../../assets/img/background_focus.webp');
+            background-position: left;
+        }
+
+        /*&::before {
             
             content: "";
             position: absolute;
@@ -111,7 +116,7 @@ header{
             left: 0%;
             background-color: rgba(0, 0, 0, 0.409);
 
-        }
+        }*/
 
     }
 
