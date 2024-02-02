@@ -36,6 +36,7 @@ const InscriptionComponent = ( { content, existen, premiosText, text } : Content
                             <strong>todos quieren algo que les recuerde a mí</strong>
                         </section>
                     </section>
+                    <h2>¿Preparad@ para robÁrmela? </h2>
 
                     {/*<div className="image">
                         <Image src={BuzonImage.src} width={BuzonImage.width} height={BuzonImage.height} alt='Imagen de buzon'/>
