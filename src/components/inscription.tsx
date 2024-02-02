@@ -36,31 +36,10 @@ const InscriptionComponent = ( { content, existen, premiosText, text } : Content
                             <strong>todos quieren algo que les recuerde a mí</strong>
                         </section>
                     </section>
-                    <h2>¿Preparad@ para robÁrmela? </h2>
-
-                    {/*<div className="image">
-                        <Image src={BuzonImage.src} width={BuzonImage.width} height={BuzonImage.height} alt='Imagen de buzon'/>
-                    </div>
-                    <div className="item_question">
-                        <p>{content.textOne}</p>
-                        <p><strong>{content.textTwo}</strong></p>
-                    </div>*/}
+                    <h2>¿Preparad@ para frobÁrmela? </h2>
                 </section>
                 <section className='premios'>
-                    <section className='menu'>
-                        <div>
-                            <hr />
-                            <Image src={TrianguloImage.src} width={TrianguloImage.width} height={TrianguloImage.height} alt="Triangulo Imagen"/>
-                        </div>
-                        <section>
-                            <h3>{text}</h3>
-                        </section>
-                        <div>
-                            <Image src={TrianguloImage.src} width={TrianguloImage.width} height={TrianguloImage.height} alt="Triangulo Imagen"/>
-                            <hr />
-                        </div>
-                    </section>
-                    <section className='all'>
+                    {/*<section className='all'>
                         {
                             existen.one ? (
                                 <div className='item one'>
@@ -92,19 +71,11 @@ const InscriptionComponent = ( { content, existen, premiosText, text } : Content
                                 </div>
                             ) : ''
                         }
-                    </section>
+                    </section>*/}
                     <section className='menu two'>
-                        <div>
-                            <hr />
-                            <Image src={TrianguloImage.src} width={TrianguloImage.width} height={TrianguloImage.height} alt="Triangulo Imagen"/>
-                        </div>
                         <section>
                             <h3>¡Primero conozcámonos un poco más!</h3>
                         </section>
-                        <div>
-                            <Image src={TrianguloImage.src} width={TrianguloImage.width} height={TrianguloImage.height} alt="Triangulo Imagen"/>
-                            <hr />
-                        </div>
                     </section>
                 </section>
             </section>

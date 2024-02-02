@@ -87,22 +87,22 @@
     h2 {
         text-transform: uppercase;
         margin-top: 10px;
-        font-size: rem(23px);
+        font-size: rem(20px);
 
         @include bp(mobileBIG){
-            font-size: rem(26px);
+            font-size: rem(22px);
         }
 
         @include bp(tablet){
-            font-size: rem(30px);
+            font-size: rem(25px);
         }
 
         @include bp(laptop){
-            font-size: rem(40px);
+            font-size: rem(29px);
         }
 
         @include bp(escritorio){
-            font-size: rem(45px);
+            font-size: rem(33px);
         }
 
     }
@@ -183,20 +183,24 @@
 
         margin-top: 40px;
 
+        @include bp(laptop){
+            margin-top: 50px;
+        }
+
         .menu{
 
-            display: grid;
-            grid-template-columns: calc(25% - 15px) 50% calc(25% - 15px);
+            //display: grid;
+            //grid-template-columns: calc(25% - 15px) 50% calc(25% - 15px);
             grid-gap: 15px;
             align-items: center;
 
             @include bp(tablet){
-                grid-template-columns: 60% calc(40% - 15px);
+                //grid-template-columns: 60% calc(40% - 15px);
             }
 
             @include bp(laptop){
-                grid-gap: 0px;
-                grid-template-columns: 60% 40%;
+                //grid-gap: 0px;
+                //grid-template-columns: 60% 40%;
             }
 
             img {
@@ -231,32 +235,42 @@
             }
 
             section{
-                background-color: $color-doce;
-                padding: 15px;
+                //background-color: $color-doce;
+                //padding: 15px;
                 text-align: center;
                 border-radius: 50px;
 
                 @include bp(tablet){
-                    max-width: 300px;
-                    justify-self: center;
+                    max-width: 100%;
+                    justify-content: center;
                     border-radius: 50px;
-                    padding: 10px 50px;
+                    padding: 0px 50px;
                     width: calc(90% - 100px);
+                    margin: auto;
                 }
 
                 @include bp(laptop){
-                    max-width: 450px;
+                    max-width: 100%;
                     width: calc(100% - 150px);
                 }
 
                 h3{
                     color: $color-cuarto;
                     font-family: $font-two;
-                    font-size: rem(20px);
+                    font-size: rem(35px);
                     text-wrap: balance;
+                    text-transform: uppercase;
+
+                    @include bp(tablet){
+                        font-size: rem(40px);
+                    }
 
                     @include bp(laptop){
-                        font-size: rem(25px);
+                        font-size: rem(45px);
+                    }
+
+                    @include bp(escritorio){
+                        font-size: rem(50px);
                     }
 
                 }
@@ -266,9 +280,9 @@
         }
 
         .menu.two{
+
             @include bp(tablet){
                 grid-template-columns: calc(40%) 60% ;
-                width: 100vw;
                 overflow: hidden;
             }
 

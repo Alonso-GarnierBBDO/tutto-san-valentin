@@ -11,7 +11,7 @@
     .content{
         width: calc(100% - 80px);
         margin: auto;
-        padding: 20px;
+        padding: 10px 20px;
         padding-bottom: 5px;
         position: relative;
         z-index: 0;
@@ -19,7 +19,7 @@
 
 
         @include bp(tablet){
-            padding: 30px;
+            padding: 15px 30px;
             width: calc(100% - 140px);
         }
 
@@ -39,12 +39,12 @@
         }
 
         .subtitleForm {
-            margin-top: 25px;
-            padding-bottom: 30px;
+            margin-top: 0px;
+            padding-bottom: 10px;
             color: $color-cuarto;
             @include bp(laptop){
-                padding-bottom: 50px;
-                margin-top: 50px;
+                padding-bottom: 40px;
+                margin-top: 10px;
             }
         }
 
