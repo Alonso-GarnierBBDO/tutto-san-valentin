@@ -1,6 +1,7 @@
 import BuzonImage from '@/assets/img/buzon_two.png';
 import TrianguloImage from '@/assets/img/triangulo.png';
 import Image from 'next/image';
+import RecuerdeBackground from '@/assets/img/background_item.png';
 
 type Content = {
     content: {
@@ -26,13 +27,23 @@ const InscriptionComponent = ( { content, existen, premiosText, text } : Content
         <>
             <section className="content_inscription">
                 <section className="content">
-                    <div className="image">
+
+                    <section className='recuerde'>
+                        <img src={ RecuerdeBackground.src } alt="" />
+                        <section className='text'>
+                            <span>no te culpo,</span>
+                            <p>este san Valentín</p>
+                            <strong>todos quieren algo que les recuerde a mí</strong>
+                        </section>
+                    </section>
+
+                    {/*<div className="image">
                         <Image src={BuzonImage.src} width={BuzonImage.width} height={BuzonImage.height} alt='Imagen de buzon'/>
                     </div>
                     <div className="item_question">
                         <p>{content.textOne}</p>
                         <p><strong>{content.textTwo}</strong></p>
-                    </div>
+                    </div>*/}
                 </section>
                 <section className='premios'>
                     <section className='menu'>
