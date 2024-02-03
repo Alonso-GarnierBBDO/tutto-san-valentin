@@ -20,7 +20,7 @@
         }
 
         @include bp(laptop){
-            max-width: 750px;
+            max-width: 650px;
             margin-top: 30px;
         }
 
@@ -125,6 +125,7 @@
         font-size: rem(25px);
         color: $color-cuarto;
         font-family: $font-two;
+        
 
         @include bp(tablet){
             /*display: grid;

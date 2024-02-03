@@ -36,42 +36,9 @@ const InscriptionComponent = ( { content, existen, premiosText, text } : Content
                             <strong>todos quieren algo que les recuerde a mí</strong>
                         </section>
                     </section>
-                    <h2>¿Preparad@ para frobÁrmela? </h2>
+                    <h2>¿Preparad@ para robÁrmela? </h2>
                 </section>
                 <section className='premios'>
-                    {/*<section className='all'>
-                        {
-                            existen.one ? (
-                                <div className='item one'>
-                                    <p>{premiosText.one}</p>
-                                </div>
-                            ) : ''
-                        }
-                        {
-                            existen.two ? (
-                                <>
-                                    {
-                                        !existen.one && existen.two ? (
-                                            <div className='item two doble'>
-                                                <p>{premiosText.two}</p>
-                                            </div>
-                                        ) : (
-                                            <div className='item two'>
-                                                <p>{premiosText.two}</p>
-                                            </div>
-                                        )
-                                    }
-                                </>
-                            ) : ''
-                        }
-                        {
-                            existen.three ? (
-                                <div className='item three'>
-                                    <p>{premiosText.three}</p>
-                                </div>
-                            ) : ''
-                        }
-                    </section>*/}
                     <section className='menu two'>
                         <section>
                             <h3>¡Primero conozcámonos un poco más!</h3>

@@ -9,9 +9,9 @@
     }
 
     .content{
-        width: calc(100% - 80px);
+        width: calc(100% - 30px);
         margin: auto;
-        padding: 10px 20px;
+        padding: 10px 0px;
         padding-bottom: 5px;
         position: relative;
         z-index: 0;
@@ -234,6 +234,7 @@
                     border: none;
                     cursor: pointer;
                     background-color: $color-cuarto;
+                    display: none;
 
                     &::before{
                         content: "";
@@ -260,7 +261,102 @@
             .quiz{
 
                 .question{
+
                     margin-top: 10px;
+
+                    .recuerde {
+
+                        position: relative;
+                        display: flex;
+                        margin-top: 0px;
+                        color: $color-cuarto;
+                        font-family: $font-two;
+                        margin-bottom: 20px;
+                
+                        @include bp(mobileBIG){
+                            max-width: 500px;
+                            margin: auto;
+                            margin-top: 10px;
+                            margin-bottom: 20px;
+                        }
+                
+                        @include bp(tablet){
+                            max-width: 600px;
+                            margin-bottom: 30px;
+                        }
+                
+                        @include bp(laptop){
+                            max-width: 650px;
+                            margin-top: 30px;
+                            margin-bottom: 35px;
+                        }
+                
+                        img {
+                            width: 100%;
+                            max-width: 100%;
+                            margin-bottom: 0px;
+                            pointer-events: none;
+                        }
+                
+                        .text {
+                
+                            position: absolute;
+                            top: 0px;
+                            width: 50%;
+                            height: 100%;
+                            display: flex;
+                            justify-content: center;
+                            left: 10%;
+                            flex-flow: column;
+                            text-align: left;
+                
+                            span,
+                            strong {
+                
+                                font-size: rem(16px);
+                                text-transform: uppercase;
+                
+                                @include bp(mobileBIG){
+                                    font-size: rem(20px);
+                                }
+                
+                                @include bp(tablet){
+                                    font-size: rem(25px);
+                                }
+                
+                                @include bp(laptop){
+                                    font-size: rem(30px);
+                                }
+                
+                            }
+                
+                            p.title_box {
+                                font-size: rem(26px);
+                                display: inline;
+                                text-align: left;
+                                padding: 0px;
+                                margin: 0px;
+                                color: $color-cuarto;
+                                font-family: $font-two;
+                                width: 100%;
+                
+                                @include bp(mobileBIG){
+                                    font-size: rem(35px);
+                                }
+                
+                                @include bp(tablet){
+                                    font-size: rem(40px);
+                                }
+                
+                                @include bp(laptop){
+                                    font-size: rem(45px);
+                                }
+                
+                            }
+                
+                        }
+                
+                    }
 
                     .item_question{
 
@@ -280,13 +376,13 @@
                 }
 
                 label{
+
                     flex-flow: row;
-                    margin-bottom: 5px;
+                    margin-bottom: 15px;
                     font-size: rem(15px);
                     font-family: $font-two;
                     color: $color-cuarto;
                     cursor: pointer;
-
 
                     @include bp(tablet){
                         width: 100%;
@@ -297,6 +393,17 @@
                         display: block;
                         width: 100%;
                         text-transform: uppercase;
+                        color: $color-diesiseis;
+                        background-color: $color-quince;
+                        border: 1px solid $color-diesiseis;
+                        padding: 10px;
+                        border-radius: 10px;
+                        transition: .2s ease;
+                    }
+
+                    input[type="radio"]:checked ~ span{
+                        background-color: $color-diesiseis;
+                        color: $color-quince;
                     }
 
                 }
@@ -323,6 +430,12 @@
                         text-align: center;
                         justify-content: center;
                         text-transform: uppercase;
+                        background-color: transparent;
+                        border: none;
+
+                        @include bp(tablet){
+                            margin-bottom: 20px;
+                        }
     
                         @include bp(laptop){
                             font-size: rem(30px);
@@ -337,6 +450,69 @@
                             margin: 0px; 
                         }
     
+                    }
+
+                    .items {
+
+                        display: grid;
+                        grid-template-columns: calc(50% - 7.5px) calc(50% - 7.5px);
+                        grid-gap: 15px;
+
+                        @include bp(tabletMD){
+                            grid-template-columns: repeat(4, calc(25% - 19px));
+                            grid-gap: 25px;
+                        }
+
+                        label {
+
+                            display: flex;
+                            flex-flow: column;
+
+                            .sueta {
+
+                                height: 200px;
+                                width: 100%;
+                                background-color: $color-quince;
+                                border-radius: 15px;
+                                pointer-events: none;
+                                transition: .2s ease;
+
+                                @include bp(tablet){
+                                    height: 250px;
+                                }
+
+                            }
+
+                            &:hover {
+
+                                button {
+                                    color: $color-diesiseis;
+                                    background-color: $color-quince;
+                                }
+
+                            }
+
+                            button {
+
+                                background-color: $color-diesiseis;
+                                color: $color-quince;
+                                pointer-events: none;
+                                opacity: 1;
+                                transition: .2s ease;
+                                width: 100%;
+
+                            }
+
+                            input[type="radio"]:checked ~ .sueta {
+                                background-color: $color-diesiseis;
+                            }
+
+                            input[type="radio"]:checked ~ button {
+                                opacity: 0.4;
+                            }
+
+                        }
+
                     }
 
                     textarea{
@@ -544,7 +720,7 @@
 
             .content_item.view.quiz{
 
-                margin-top: 20px;
+                margin-top: 0px;
 
                 @include bp(tablet){
 
