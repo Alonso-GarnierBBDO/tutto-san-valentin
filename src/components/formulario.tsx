@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import ThanksComponent from '@/components/thanks';
 import { useEffect, useState, useRef, FormEvent, ChangeEvent, ChangeEventHandler } from "react";
 import RecuerdeBackground from '@/assets/img/background_item.png';
@@ -482,7 +483,7 @@ const FormularioComponent = ({formulario, deseo, enviar, gracias, gracias_button
 
                                 <section className="question">
                                     <section className='recuerde'>
-                                        <img src={ RecuerdeBackground.src } alt="" />
+                                        <Image src={ RecuerdeBackground.src } width={RecuerdeBackground.width} height={RecuerdeBackground.height} alt="Imagen de recordar" />
                                         <section className='text'>
                                             <p className="title_box">Elegí tu razón favorita para robarme mi suéter</p>
                                             {/*<p className="title_box">este san Valentín</p>*/}
@@ -490,19 +491,19 @@ const FormularioComponent = ({formulario, deseo, enviar, gracias, gracias_button
                                     </section>
                                     <label htmlFor="option_uno">
                                         <input type="radio" name="option_one" id="option_uno" value="A) PORQUE TE VA A RECORDAR mi cremosa combinación de chocolate y bailey's" required/>
-                                        <span>A) PORQUE TE VA A RECORDAR mi cremosa combinación de chocolate y bailey's</span>
+                                        <span>A&#41; PORQUE TE VA A RECORDAR mi cremosa combinación de chocolate y bailey&#96;s</span>
                                     </label>
                                     <label htmlFor="option_dos">
                                         <input type="radio" name="option_one" id="option_dos" value="B) PORQUE VAS A ANTOJARTE de morder mi crocante chocolate belga cuando te la pongás" required/>
-                                        <span>B) PORQUE VAS A ANTOJARTE de morder mi crocante chocolate belga cuando te la pongás</span>
+                                        <span>B&#41; PORQUE VAS A ANTOJARTE de morder mi crocante chocolate belga cuando te la pongás</span>
                                     </label>
                                     <label htmlFor="option_tres">
                                         <input type="radio" name="option_one" id="option_tres" value="C) Porque es perfecta para prepararte un tutto very hot y acurrucuarte con ella" required/>
-                                        <span>C) Porque es perfecta para prepararte un tutto very hot y acurrucuarte con ella</span>
+                                        <span>C&#41; Porque es perfecta para prepararte un tutto very hot y acurrucuarte con ella</span>
                                     </label>
                                     <label htmlFor="option_cuatro">
                                         <input type="radio" name="option_one" id="option_cuatro" value="d) Porque vas a verte tan seductor como mi chocolate 100% real cuando la usés" required/>
-                                        <span>d) Porque vas a verte tan seductor como mi chocolate 100% real cuando la usés</span>
+                                        <span>d&#41; Porque vas a verte tan seductor como mi chocolate 100% real cuando la usés</span>
                                     </label>
                                 </section>
 

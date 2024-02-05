@@ -11,18 +11,9 @@ export const metadata: Metadata = {
   referrer: 'origin-when-cross-origin',
   keywords: ['Navidad', 'Tutto', 'Regalos', 'Santa claus'],
   authors: [{ name: 'Garnier BBDO' }, { name: 'Garnier BBDO', url: 'https://garnierbbdo.com' }],
-  colorScheme: 'light',
-  creator: 'Tutto navidad',
-  publisher: 'Tutto navidad',
-  formatDetection: {
-    email: false,
-    address: false,
-    telephone: false,
-  },
   openGraph: {
     title: 'Tutto Navidad',
     description: 'En navidad algunos le dejan sus deseos a Santa, pero esta Navidad vos dejámelos a mí.',
-    url: 'https://tutto.com',
     siteName: 'Tutto navidad',
     type: 'website',
     images: [
@@ -33,7 +24,6 @@ export const metadata: Metadata = {
       }
    ],
   },
-  category: 'LBTI'
 }
 
 export default function RootLayout({

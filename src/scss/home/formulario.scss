@@ -251,6 +251,7 @@
             color: $color-cuarto;
             font-family: $font-two;
             margin-bottom: 20px;
+            
 
             @include bp(mobileBIG) {
               max-width: 500px;
@@ -275,6 +276,7 @@
               max-width: 100%;
               margin-bottom: 0px;
               pointer-events: none;
+              height: auto;
             }
 
             .text {

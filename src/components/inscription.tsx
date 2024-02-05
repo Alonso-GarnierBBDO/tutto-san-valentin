@@ -29,7 +29,7 @@ const InscriptionComponent = ( { content, existen, premiosText, text } : Content
                 <section className="content">
 
                     <section className='recuerde'>
-                        <img src={ RecuerdeBackground.src } alt="" />
+                        <Image src={ RecuerdeBackground.src } alt="Fondo de BAckground" width={RecuerdeBackground.width} height={RecuerdeBackground.height} />
                         <section className='text' dangerouslySetInnerHTML={{ __html : content.textOne}}></section>
                     </section>
                     <h2>¿Preparad@ para robÁrmela? </h2>
