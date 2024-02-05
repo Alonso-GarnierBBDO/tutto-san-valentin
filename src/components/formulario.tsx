@@ -341,7 +341,7 @@ const FormularioComponent = ({formulario, deseo, enviar, gracias, gracias_button
 
 
         }else{
-            setMessage('Completa tu deseo')
+            setMessage('Selecciona la camiseta.')
         }
 
     }
@@ -523,7 +523,7 @@ const FormularioComponent = ({formulario, deseo, enviar, gracias, gracias_button
                                 {/* Message */}
 
                                 <section className="message">
-                                    <span dangerouslySetInnerHTML={{__html: deseo.text}} ></span>
+                                    {/*<span dangerouslySetInnerHTML={{__html: deseo.text}} ></span>*/}
                                     <section className="items">
                                         <label htmlFor="sueta_1">
                                             <input type="radio" value="Sueta #1" name="sueta" id="sueta_1"/>
