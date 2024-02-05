@@ -1,7 +1,7 @@
 import Image from "next/image";
 import LogoTutto from '@/assets/img/tutto_logo.svg';
 import ChocaloateImage from '@/assets/img/chocolate.png';
-import PlacerText from '@/assets/img/gracias.svg';
+import PlacerText from '@/assets/img/gracias.png';
 
 
 /**
