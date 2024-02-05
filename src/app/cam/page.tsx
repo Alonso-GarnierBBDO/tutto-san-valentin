@@ -7,7 +7,7 @@ function CAM(){
 
     const content = {
         incription : {
-            textOne: '¡RespondE mi formulario de los deseos y descubrE cuál de mis versiones no puede faltar en',
+            textOne: "<span>no te culpo,</span><p>este san Valentín</p><strong>todos quieren algo que les recuerde a mí</strong>",
             textTwo: 'tu lista de Navidad!'
         },
         header: {

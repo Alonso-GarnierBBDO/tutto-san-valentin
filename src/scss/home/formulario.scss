@@ -312,7 +312,7 @@
                 text-align: left;
                 padding: 0px;
                 margin: 0px;
-                color: $color-cuarto;
+                color: $color-quince;
                 font-family: $font-two;
                 width: 100%;
 
@@ -388,7 +388,7 @@
             text-transform: inherit;
             font-size: rem(20px);
             font-family: $font-two;
-            color: $color-cuarto;
+            color: $color-diesiseis;
             width: 100%;
             display: flex;
             flex-flow: row;
@@ -518,7 +518,7 @@
       .error {
         font-size: rem(20px);
         font-family: $font-two;
-        color: $color-cuarto;
+        color: $color-diesiseis;
         text-align: center;
         display: block;
       }
@@ -568,8 +568,13 @@
       .part_one {
         input.err,
         select.err {
-          background-color: $color-quinto;
-          color: $color-ocho;
+          background-color: $color-diesiseis;
+          color: $color-quince;
+
+          &::placeholder{
+            color: $color-quince;
+          }
+
         }
       }
 

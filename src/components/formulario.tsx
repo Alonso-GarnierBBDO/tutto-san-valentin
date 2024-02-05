@@ -489,20 +489,20 @@ const FormularioComponent = ({formulario, deseo, enviar, gracias, gracias_button
                                         </section>
                                     </section>
                                     <label htmlFor="option_uno">
-                                        <input type="radio" name="option_one" id="option_uno" value="1. El regalo más especial de todos" required/>
-                                        <span>A) el regalo más especial de todos</span>
+                                        <input type="radio" name="option_one" id="option_uno" value="A) PORQUE TE VA A RECORDAR mi cremosa combinación de chocolate y bailey's" required/>
+                                        <span>A) PORQUE TE VA A RECORDAR mi cremosa combinación de chocolate y bailey's</span>
                                     </label>
                                     <label htmlFor="option_dos">
-                                        <input type="radio" name="option_one" id="option_dos" value="2. Algo que te seduzca a primera vista" required/>
-                                        <span>b) algo que te seduzca a primera vista</span>
+                                        <input type="radio" name="option_one" id="option_dos" value="B) PORQUE VAS A ANTOJARTE de morder mi crocante chocolate belga cuando te la pongás" required/>
+                                        <span>B) PORQUE VAS A ANTOJARTE de morder mi crocante chocolate belga cuando te la pongás</span>
                                     </label>
                                     <label htmlFor="option_tres">
-                                        <input type="radio" name="option_one" id="option_tres" value="3. Un detalle de alguien especial" required/>
-                                        <span>c) un detalle de alguien especial</span>
+                                        <input type="radio" name="option_one" id="option_tres" value="C) Porque es perfecta para prepararte un tutto very hot y acurrucuarte con ella" required/>
+                                        <span>C) Porque es perfecta para prepararte un tutto very hot y acurrucuarte con ella</span>
                                     </label>
                                     <label htmlFor="option_cuatro">
-                                        <input type="radio" name="option_one" id="option_cuatro" value="4. Un regalo que despierte tus sentidos" required/>
-                                        <span>d) un regalo que despierte tus sentidos</span>
+                                        <input type="radio" name="option_one" id="option_cuatro" value="d) Porque vas a verte tan seductor como mi chocolate 100% real cuando la usés" required/>
+                                        <span>d) Porque vas a verte tan seductor como mi chocolate 100% real cuando la usés</span>
                                     </label>
                                 </section>
 

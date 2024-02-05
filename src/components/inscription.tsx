@@ -30,11 +30,7 @@ const InscriptionComponent = ( { content, existen, premiosText, text } : Content
 
                     <section className='recuerde'>
                         <img src={ RecuerdeBackground.src } alt="" />
-                        <section className='text'>
-                            <span>no te culpo,</span>
-                            <p>este san Valentín</p>
-                            <strong>todos quieren algo que les recuerde a mí</strong>
-                        </section>
+                        <section className='text' dangerouslySetInnerHTML={{ __html : content.textOne}}></section>
                     </section>
                     <h2>¿Preparad@ para robÁrmela? </h2>
                 </section>
