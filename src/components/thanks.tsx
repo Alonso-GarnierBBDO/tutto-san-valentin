@@ -1,10 +1,6 @@
 import Image from "next/image";
 import LogoTutto from '@/assets/img/tutto_logo.svg';
-import ParticipandoText from '@/assets/img/participando.png';
-import BackgroundDescription from '@/assets/img/background_description.png';
 import ChocaloateImage from '@/assets/img/chocolate.png';
-import ChocaloateImageEscritorio from '@/assets/img/chocolate_escritorio.png';
-import ChocolateTutto from '@/assets/img/tutto_gracias.png';
 import PlacerText from '@/assets/img/gracias.svg';
 
 

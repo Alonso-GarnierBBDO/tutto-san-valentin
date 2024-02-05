@@ -8,7 +8,6 @@ import BackgroundOne from '@/assets/img/background_one.png';
 import BackgroundTwo from '@/assets/img/background_two.png';
 import BackgroundThree from '@/assets/img/background_three.png';
 import BackgroundFour from '@/assets/img/background_four.png';
-import BackgroundTutto from '@/assets/img/background_tutto.png';
 
 const MiTutto = () => {
 
