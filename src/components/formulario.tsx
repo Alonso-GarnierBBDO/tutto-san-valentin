@@ -1,10 +1,7 @@
 'use client';
 
-import Image from "next/image";
-import BuzonImage from '@/assets/img/buzon.png';
 import ThanksComponent from '@/components/thanks';
 import { useEffect, useState, useRef, FormEvent, ChangeEvent, ChangeEventHandler } from "react";
-import { createClient } from '@supabase/supabase-js';
 import RecuerdeBackground from '@/assets/img/background_item.png';
 
 
@@ -49,7 +46,6 @@ const FormularioComponent = ({formulario, deseo, enviar, gracias, gracias_button
     // Registramos supabase
     const supabaseUrl = 'https://jkuwgrxanzpagiydglaz.supabase.co'
     const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImprdXdncnhhbnpwYWdpeWRnbGF6Iiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTcwMDg2ODAwNCwiZXhwIjoyMDE2NDQ0MDA0fQ.CPz7_wYbBhqYBrJJqxbYrRi2fgvS7vQuinV-5bvrnEI';
-    const supabase = createClient(supabaseUrl, supabaseKey);
 
     
 
@@ -230,7 +226,6 @@ const FormularioComponent = ({formulario, deseo, enviar, gracias, gracias_button
 
                 const deseoInput : HTMLInputElement | undefined = document.querySelector('input[name="sueta"]:checked') as HTMLInputElement | undefined;
 
-                console.log(questionOneInput?.value);
 
                 if (
                     nameInput && 
@@ -285,42 +280,30 @@ const FormularioComponent = ({formulario, deseo, enviar, gracias, gracias_button
                     setTextSend('Enviando...')
                     setDisabled(true);
 
-                    if(countryCode == '/cam'){
+                    const form = new FormData();
 
-                        saveInfo = {
-                            nombre: name,
-                            apellido: lastName,
-                            genero: genero,
-                            correo: email,
-                            telefono: phone,
-                            edad: year,
-                            pais: country,
-                            provincia: provincia ? provincia : null,
-                            departamentos: departamentos ? departamentos : null,
-                            pregunta_uno: questionOne,
-                            mensaje: deseo
-                        }
+                    form.append('name', name);
+                    form.append('last_name', lastName);
+                    form.append('gender', genero);
+                    form.append('email', email);
+                    form.append('phone', phone);
+                    form.append('year', year);
+                    form.append('country', country ? country : (pais ? pais : ''));
+                    form.append('favorite_reason', questionOne);
+                    form.append('sueter', deseo);
+                    form.append('province', provincia ? provincia : '');
+                    form.append('state', departamentos ? departamentos : '');
 
-                    }else{
-                        saveInfo = {
-                            nombre: name,
-                            apellido: lastName,
-                            genero: genero,
-                            correo: email,
-                            telefono: phone,
-                            edad: year,
-                            pais: country,
-                            provincia: provincia ? provincia : null,
-                            pregunta_uno: questionOne,
-                            mensaje: deseo
-    
-                        }
-                    }
+                    const saveData = await fetch('https://api.chocolatetutto.com/api/save.php', {
+                        method: 'POST',
+                        body: form
+                    }).then( res => {
 
+                        return res.status;
 
-                    const { data, error } = await supabase.from(countryTable).insert([saveInfo]).select();
+                    });
 
-                    if(data){
+                    if(saveData == 201){
                         setOpenModal(true);
 
                         const document_main : HTMLElement | null = document.body;
@@ -328,14 +311,11 @@ const FormularioComponent = ({formulario, deseo, enviar, gracias, gracias_button
                         if(document_main){
                             document_main.style.overflow = 'hidden';
                         }
-
-
-                    }
-
-                    if(error){
+                    }else{
                         alert("Ocurrió un error al enviar el formulario, por favor inténtelo más tarde.")
-                        console.error(error);
                     }
+
+
 
                     deseoInput.disabled = false;
                     setTextSend('ENVIÁ TU DESEO AQUÍ')

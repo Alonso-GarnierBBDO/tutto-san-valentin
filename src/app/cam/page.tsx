@@ -1,6 +1,7 @@
 import Header from '@/components/header';
 import InscriptionComponent from '@/components/inscription';
 import FormularioComponent from '@/components/formulario';
+import Footer from '@/components/footer';
 
 function CAM(){
 
@@ -42,6 +43,7 @@ function CAM(){
             <Header header={content.header}/>
             <InscriptionComponent content={content.incription} existen={content.premios_exist} premiosText={content.premios_text} text={content.text}/>
             <FormularioComponent gracias_button={content.gracias_button} gracias={content.gracias} enviar={content.formulario} deseo={content.deseoPregunta} formulario={content.preguntas}/>
+            <Footer/>
         </>
     )
 

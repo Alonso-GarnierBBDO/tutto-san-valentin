@@ -57,8 +57,6 @@ const MiTutto = () => {
 
     }, []);
 
-    console.log(background);
-
     return (
         <>
             <section className="mi_tutto">
