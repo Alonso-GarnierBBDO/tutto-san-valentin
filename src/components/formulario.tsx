@@ -292,13 +292,20 @@ const FormularioComponent = ({formulario, deseo, enviar, gracias, gracias_button
                     form.append('country', country ? country : (pais ? pais : ''));
                     form.append('favorite_reason', questionOne);
                     form.append('sueter', deseo);
-                    form.append('province', provincia ? provincia : '');
-                    form.append('state', departamentos ? departamentos : '');
+
+                    if(provincia){
+                        form.append('province', provincia ? provincia : '');
+                    }else if(departamentos){
+                        form.append('state', departamentos ? departamentos : '');
+                    }
+
 
                     const saveData = await fetch('https://api.chocolatetutto.com/api/save.php', {
                         method: 'POST',
                         body: form
                     }).then( res => {
+
+                        console.log(res);
 
                         return res.status;
 
@@ -490,7 +497,7 @@ const FormularioComponent = ({formulario, deseo, enviar, gracias, gracias_button
                                         </section>
                                     </section>
                                     <label htmlFor="option_uno">
-                                        <input type="radio" name="option_one" id="option_uno" value="A) PORQUE TE VA A RECORDAR mi cremosa combinación de chocolate y bailey's" required/>
+                                        <input type="radio" name="option_one" id="option_uno" value="A) PORQUE TE VA A RECORDAR mi cremosa combinación de chocolate y bailey" required/>
                                         <span>A&#41; PORQUE TE VA A RECORDAR mi cremosa combinación de chocolate y bailey&#96;s</span>
                                     </label>
                                     <label htmlFor="option_dos">

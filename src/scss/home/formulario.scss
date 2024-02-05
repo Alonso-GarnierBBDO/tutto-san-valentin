@@ -191,6 +191,12 @@
             text-transform: uppercase;
           }
 
+          &:focus{
+
+            border: 2px solid;
+
+          }
+
           @include bp(tablet) {
             width: 100%;
             font-size: rem(17px);
