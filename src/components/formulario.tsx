@@ -505,8 +505,8 @@ const FormularioComponent = ({formulario, deseo, enviar, gracias, gracias_button
                                         <span>B&#41; PORQUE VAS A ANTOJARTE de morder mi crocante chocolate belga cuando te la pongás</span>
                                     </label>
                                     <label htmlFor="option_tres">
-                                        <input type="radio" name="option_one" id="option_tres" value="C) Porque es perfecta para prepararte un tutto very hot y acurrucuarte con ella" required/>
-                                        <span>C&#41; Porque es perfecta para prepararte un tutto very hot y acurrucuarte con ella</span>
+                                        <input type="radio" name="option_one" id="option_tres" value="C) Porque es perfecta para acurrucarnos con uno de mis bombones" required/>
+                                        <span>C&#41; Porque es perfecta para acurrucarnos con uno de mis bombones</span>
                                     </label>
                                     <label htmlFor="option_cuatro">
                                         <input type="radio" name="option_one" id="option_cuatro" value="d) Porque vas a verte tan seductor como mi chocolate 100% real cuando la usés" required/>
