@@ -20,7 +20,7 @@ function CAM(){
             text:  '¡Ahora deja tu deseo más seductor en mi buzón para quedar participando!'
         },
         formulario: {
-            enviar: 'Envia TU DESEO AQUÍ',
+            enviar: 'RÓBATELA AQUÍ',
             compartir: 'Compárteme TUS DATOS PARA CONTACTARTE SI ERES EL GANADOR, Y PARA ENVIARTE SORPRESAS O NUEVAS PROMOCIONES EN EL FUTURO.'
         },
         gracias: "<p>Listo, ya estás</p><strong>participando</strong><p>ahora me voy a leer todos los deseos que me han llegado y si tienes suerte... nos estaremos viendo muy pronto debajo del árbol</p>",

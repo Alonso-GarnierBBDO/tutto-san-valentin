@@ -326,7 +326,7 @@ const FormularioComponent = ({formulario, deseo, enviar, gracias, gracias_button
 
 
                     deseoInput.disabled = false;
-                    setTextSend('ENVIÁ TU DESEO AQUÍ')
+                    setTextSend('ROBÁTELA AQUÍ')
                     setDisabled(false);
 
                     const numberQuestionOne = parseInt(questionOne);

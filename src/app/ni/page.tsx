@@ -20,7 +20,7 @@ function NI(){
             text:  '¡Ahora dejá tu deseo más seductor en mi buzón para quedar participando!'
         },
         formulario: {
-            enviar: 'ENVIÁ TU DESEO AQUÍ',
+            enviar: 'ROBÁTELA AQUÍ',
             compartir: 'Compartime tus datos para contactarte si sos el ganador, y para enviarte sorpresas o nuevas promociones en el futuro.'
         },
         gracias: "<p>Listo, ya estás</p><strong>participando</strong><p>ahora me voy a leer todos los deseos que me han llegado y si tenés suerte... nos estaremos viendo muy pronto debajo del árbol</p>",
