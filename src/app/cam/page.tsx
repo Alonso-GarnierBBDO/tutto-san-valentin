@@ -8,13 +8,14 @@ function CAM(){
     const content = {
         incription : {
             textOne: "<span>no te culpo,</span><p>este san Valentín</p><strong>todos quieren algo que les recuerde a mí</strong>",
-            textTwo: 'tu lista de Navidad!'
+            textTwo: 'B) PORQUE VAS A ANTOJARTE DE MORDER MI CROCANTE CHOCOLATE BELGA CUANDO TE LA PONGAS',
+            textThree: 'D) PORQUE VAS A VERTE TAN SEDUCTOR COMO MI CHOCOLATE 100% REAL CUANDO LA USES'
         },
         header: {
             deseo: 'HOLA, ¿YA HICISTE TU LISTA? algunos le dejan deseos a santa pero esta navidad tu déjamelos a mí.'
         },
         preguntas: {
-            cuartaPregunta: '4. si nos encontráramos a solas en tu casa esta Navidad, tú desearías…'
+            cuartaPregunta: 'Elige tu razón favorita para robarme mi suéter'
         },
         deseoPregunta: {
             text:  '¡Ahora deja tu deseo más seductor en mi buzón para quedar participando!'
@@ -42,7 +43,7 @@ function CAM(){
         <>
             <Header header={content.header}/>
             <InscriptionComponent content={content.incription} existen={content.premios_exist} premiosText={content.premios_text} text={content.text}/>
-            <FormularioComponent gracias_button={content.gracias_button} gracias={content.gracias} enviar={content.formulario} deseo={content.deseoPregunta} formulario={content.preguntas}/>
+            <FormularioComponent incription={content.incription} gracias_button={content.gracias_button} gracias={content.gracias} enviar={content.formulario} deseo={content.deseoPregunta} formulario={content.preguntas}/>
             <Footer/>
         </>
     )

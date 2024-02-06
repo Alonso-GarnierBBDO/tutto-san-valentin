@@ -7,6 +7,11 @@ import RecuerdeBackground from '@/assets/img/background_item.png';
 
 
 type Content =  {
+    incription : {
+        textOne: string,
+        textTwo: string,
+        textThree: string
+    },
     formulario: {
         cuartaPregunta: string,
     },
@@ -21,7 +26,7 @@ type Content =  {
     gracias_button: string
 }
 
-const FormularioComponent = ({formulario, deseo, enviar, gracias, gracias_button} : Content ) => {
+const FormularioComponent = ({formulario, deseo, enviar, gracias, gracias_button, incription} : Content ) => {
 
     const partOne = useRef<HTMLElement | null>(null);
     const partTwo = useRef<HTMLElement | null>(null);
@@ -44,9 +49,6 @@ const FormularioComponent = ({formulario, deseo, enviar, gracias, gracias_button
     const [respuestaCPreguntaDos, setRespuestaCPreguntaDos] = useState<string>('c. en tu casa con quien más querés');
     const [phonePlaceholder, setPhonePlaceholder] = useState<string>('Teléfono:');
 
-    // Registramos supabase
-    const supabaseUrl = 'https://jkuwgrxanzpagiydglaz.supabase.co'
-    const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImprdXdncnhhbnpwYWdpeWRnbGF6Iiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTcwMDg2ODAwNCwiZXhwIjoyMDE2NDQ0MDA0fQ.CPz7_wYbBhqYBrJJqxbYrRi2fgvS7vQuinV-5bvrnEI';
 
     
 
@@ -68,6 +70,8 @@ const FormularioComponent = ({formulario, deseo, enviar, gracias, gracias_button
 
     }, [])
 
+    
+
     const next = () => {
 
         const htmlPartOne : HTMLElement | null = partOne.current;
@@ -79,6 +83,7 @@ const FormularioComponent = ({formulario, deseo, enviar, gracias, gracias_button
         if(htmlPartOne){
 
             const childElement = htmlPartOne.querySelectorAll('input, select');
+            const titleElement : HTMLElement | null = document.querySelector('.premios .menu h3');
 
             childElement.forEach((e: Element) => {
 
@@ -111,6 +116,11 @@ const FormularioComponent = ({formulario, deseo, enviar, gracias, gracias_button
                         setViewQuestion(false);
                         setViewDeseo(true);
                         setMessage('');
+
+                        if(titleElement){
+                            titleElement.style.display = 'none';
+                        }
+
                     }
 
 
@@ -121,10 +131,16 @@ const FormularioComponent = ({formulario, deseo, enviar, gracias, gracias_button
                 setViewData(false);
                 setViewQuestion(true);
                 setMessage('');
+                if(titleElement){
+                    titleElement.style.display = 'block';
+                }
             }else{
                 setViewData(true);
                 setViewQuestion(false);
                 setMessage('Por favor verifique que los campos estén completados correctamente.');
+                if(titleElement){
+                    titleElement.style.display = 'block';
+                }
             }
 
         }
@@ -135,13 +151,24 @@ const FormularioComponent = ({formulario, deseo, enviar, gracias, gracias_button
 
     const prev = () => {
 
+        const titleElement : HTMLElement | null = document.querySelector('.premios .menu h3');
+
         if(viewQuestion){
             setViewData(true);
             setViewQuestion(false);
+
+            if(titleElement){
+                titleElement.style.display = 'block';
+            }
+
         }else if(viewDeseo){
             setViewData(false);
             setViewQuestion(true);
             setViewDeseo(false);
+
+            if(titleElement){
+                titleElement.style.display = 'block';
+            }
         }
 
         setMessage('');
@@ -422,7 +449,7 @@ const FormularioComponent = ({formulario, deseo, enviar, gracias, gracias_button
                             </label>
                             <label htmlFor="genero">
                                 <select name="genero" id="genero" required>
-                                    <option value="" disabled selected>Genéro:</option>
+                                    <option value="">Genéro:</option>
                                     <option value="masculino">Masculino</option>
                                     <option value="femenino">Femenino</option>
                                     <option value="otro">Otro</option>
@@ -492,7 +519,7 @@ const FormularioComponent = ({formulario, deseo, enviar, gracias, gracias_button
                                     <section className='recuerde'>
                                         <Image src={ RecuerdeBackground.src } width={RecuerdeBackground.width} height={RecuerdeBackground.height} alt="Imagen de recordar" />
                                         <section className='text'>
-                                            <p className="title_box">Elegí tu razón favorita para robarme mi suéter</p>
+                                            <p className="title_box">{ formulario.cuartaPregunta }</p>
                                             {/*<p className="title_box">este san Valentín</p>*/}
                                         </section>
                                     </section>
@@ -502,7 +529,7 @@ const FormularioComponent = ({formulario, deseo, enviar, gracias, gracias_button
                                     </label>
                                     <label htmlFor="option_dos">
                                         <input type="radio" name="option_one" id="option_dos" value="B) PORQUE VAS A ANTOJARTE de morder mi crocante chocolate belga cuando te la pongás" required/>
-                                        <span>B&#41; PORQUE VAS A ANTOJARTE de morder mi crocante chocolate belga cuando te la pongás</span>
+                                        <span>{ incription.textTwo }</span>
                                     </label>
                                     <label htmlFor="option_tres">
                                         <input type="radio" name="option_one" id="option_tres" value="C) Porque es perfecta para acurrucarnos con uno de mis bombones" required/>
@@ -510,7 +537,7 @@ const FormularioComponent = ({formulario, deseo, enviar, gracias, gracias_button
                                     </label>
                                     <label htmlFor="option_cuatro">
                                         <input type="radio" name="option_one" id="option_cuatro" value="d) Porque vas a verte tan seductor como mi chocolate 100% real cuando la usés" required/>
-                                        <span>d&#41; Porque vas a verte tan seductor como mi chocolate 100% real cuando la usés</span>
+                                        <span>{ incription.textThree }</span>
                                     </label>
                                 </section>
 
@@ -541,6 +568,13 @@ const FormularioComponent = ({formulario, deseo, enviar, gracias, gracias_button
                                         </label>
                                         <label htmlFor="sueta_3">
                                             <input type="radio" value="Sueta #3" name="sueta" id="sueta_3"/>
+                                            <div className="sueta">
+                                            
+                                            </div>
+                                            <button>Esta es la mía</button>
+                                        </label>
+                                        <label htmlFor="sueta_4">
+                                            <input type="radio" value="Sueta #4" name="sueta" id="sueta_4"/>
                                             <div className="sueta">
                                             
                                             </div>
