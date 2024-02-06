@@ -199,7 +199,7 @@ header{
                 height: 80%;
 
 
-                @include keyframes(chocolateImage){
+                @include keyframes(chocolateImageDos){
             
                     0%{
                         transform: translateY(calc(50px + 0%));
@@ -222,12 +222,12 @@ header{
                     }
     
                     100%{
-                        transform: translateY(calc(0px + 0%));
+                        transform: translateY(0%);
                         opacity: 1;
                     }
                 }
     
-                @include animate(chocolateImage, 2.5s, ease, 1);
+                @include animate(chocolateImageDos, 2.5s, ease, 1);
 
 
             }

@@ -181,13 +181,11 @@
           border-color: $color-diesiseis;
           font-size: rem(15px);
           font-family: $font-two;
-          color: $color-diesiseis;
           -webkit-appearance: none;
           -moz-appearance: none;
           appearance: none;
 
           &::placeholder {
-            color: $color-diesinueve;
             text-transform: uppercase;
           }
 
@@ -208,8 +206,23 @@
           }
         }
 
+        input {
+          color: $color-diesiseis;
+
+          &::placeholder {
+            color: $color-veinte;
+          }
+
+        }
+
         select {
           text-transform: uppercase;
+          color: $color-diesiseis;
+
+          &:required:invalid{
+            color: $color-veinte;
+          }
+
         }
 
         input[type="radio"] {
@@ -566,7 +579,6 @@
 
         &:disabled {
           transform: scale(0.9);
-          border: 2px solid $color-doce;
           color: $color-cuarto;
           background-color: $color-doce;
           cursor: no-drop;

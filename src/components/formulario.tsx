@@ -422,7 +422,7 @@ const FormularioComponent = ({formulario, deseo, enviar, gracias, gracias_button
                             </label>
                             <label htmlFor="genero">
                                 <select name="genero" id="genero" required>
-                                    <option value="">Genéro:</option>
+                                    <option value="" disabled selected>Genéro:</option>
                                     <option value="masculino">Masculino</option>
                                     <option value="femenino">Femenino</option>
                                     <option value="otro">Otro</option>
