@@ -5,6 +5,13 @@ import ThanksComponent from '@/components/thanks';
 import { useEffect, useState, useRef, FormEvent, ChangeEvent, ChangeEventHandler } from "react";
 import RecuerdeBackground from '@/assets/img/background_item.png';
 
+// Cargamos las sueters
+import SueterUno from '@/assets/img/sueters/sueter_uno.png';
+import SueterDos from '@/assets/img/sueters/sueter_dos.png';
+import SueterTres from '@/assets/img/sueters/sueter_tres.png';
+import SueterCuatro from '@/assets/img/sueters/sueter_cuatro.png';
+import SueterCinco from '@/assets/img/sueters/sueter_cinco.png';
+
 
 type Content =  {
     incription : {
@@ -555,35 +562,35 @@ const FormularioComponent = ({formulario, deseo, enviar, gracias, gracias_button
                                         <label htmlFor="sueta_1">
                                             <input type="radio" value="Sueta #1" name="sueta" id="sueta_1"/>
                                             <div className="sueta">
-                                                
+                                                <Image src={ SueterUno.src } alt='Sueter de tutto' width={SueterUno.width} height={SueterUno.height} />
                                             </div>
                                             <button>Esta es la mía</button>
                                         </label>
                                         <label htmlFor="sueta_2">
                                             <input type="radio" value="Sueta #2" name="sueta" id="sueta_2"/>
                                             <div className="sueta">
-                                                
+                                                <Image src={ SueterDos.src } alt='Sueter de tutto' width={SueterDos.width} height={SueterDos.height} />
                                             </div>
                                             <button>Esta es la mía</button>
                                         </label>
                                         <label htmlFor="sueta_3">
                                             <input type="radio" value="Sueta #3" name="sueta" id="sueta_3"/>
                                             <div className="sueta">
-                                            
+                                                <Image src={ SueterTres.src } alt='Sueter de tutto' width={SueterTres.width} height={SueterTres.height} />
                                             </div>
                                             <button>Esta es la mía</button>
                                         </label>
                                         <label htmlFor="sueta_4">
                                             <input type="radio" value="Sueta #4" name="sueta" id="sueta_4"/>
                                             <div className="sueta">
-                                            
+                                                <Image src={ SueterCuatro.src } alt='Sueter de tutto' width={SueterCuatro.width} height={SueterCuatro.height} />
                                             </div>
                                             <button>Esta es la mía</button>
                                         </label>
                                         <label htmlFor="sueta_4">
                                             <input type="radio" value="Sueta #4" name="sueta" id="sueta_4"/>
                                             <div className="sueta">
-                                            
+                                                <Image src={ SueterCinco.src } alt='Sueter de tutto' width={SueterCinco.width} height={SueterCinco.height} />
                                             </div>
                                             <button>Esta es la mía</button>
                                         </label>
