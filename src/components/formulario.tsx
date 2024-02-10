@@ -531,11 +531,11 @@ const FormularioComponent = ({formulario, deseo, enviar, gracias, gracias_button
                                         </section>
                                     </section>
                                     <label htmlFor="option_uno">
-                                        <input type="radio" name="option_one" id="option_uno" value="A) PORQUE TE VA A RECORDAR mi cremosa combinación de chocolate y bailey" required/>
+                                        <input type="radio" name="option_one" id="option_uno" value="A) Porque te va a recordar mi cremosa combinación de chocolate y bailey" required/>
                                         <span>A&#41; PORQUE TE VA A RECORDAR mi cremosa combinación de chocolate y bailey&#96;s</span>
                                     </label>
                                     <label htmlFor="option_dos">
-                                        <input type="radio" name="option_one" id="option_dos" value="B) PORQUE VAS A ANTOJARTE de morder mi crocante chocolate belga cuando te la pongás" required/>
+                                        <input type="radio" name="option_one" id="option_dos" value="B) Porque vas a antojarte de morder mi crocante chocolate belga cuando te la pongás" required/>
                                         <span>{ incription.textTwo }</span>
                                     </label>
                                     <label htmlFor="option_tres">
@@ -543,7 +543,7 @@ const FormularioComponent = ({formulario, deseo, enviar, gracias, gracias_button
                                         <span>C&#41; Porque es perfecta para acurrucarnos con uno de mis bombones</span>
                                     </label>
                                     <label htmlFor="option_cuatro">
-                                        <input type="radio" name="option_one" id="option_cuatro" value="d) Porque vas a verte tan seductor como mi chocolate 100% real cuando la usés" required/>
+                                        <input type="radio" name="option_one" id="option_cuatro" value="D) Porque vas a verte tan seductor como mi chocolate 100% real cuando la usés" required/>
                                         <span>{ incription.textThree }</span>
                                     </label>
                                 </section>
