@@ -587,8 +587,8 @@ const FormularioComponent = ({formulario, deseo, enviar, gracias, gracias_button
                                             </div>
                                             <button>Esta es la mía</button>
                                         </label>
-                                        <label htmlFor="sueta_4">
-                                            <input type="radio" value="Sueta #4" name="sueta" id="sueta_4"/>
+                                        <label htmlFor="sueta_5">
+                                            <input type="radio" value="Sueta #4" name="sueta" id="sueta_5"/>
                                             <div className="sueta">
                                                 <Image src={ SueterCinco.src } alt='Sueter de tutto' width={SueterCinco.width} height={SueterCinco.height} />
                                             </div>
