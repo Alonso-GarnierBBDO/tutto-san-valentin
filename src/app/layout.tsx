@@ -5,16 +5,16 @@ import '@/scss/global.scss';
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Tutto - Navidad',
-  description: 'En navidad algunos le dejan sus deseos a Santa, pero esta Navidad vos dejámelos a mí.',
-  applicationName: 'Tutto Navidad',
+  title: 'Tutto - San Valentín',
+  description: 'Colección de suéters robables de San Valentín',
+  applicationName: 'Tutto - San Valentín',
   referrer: 'origin-when-cross-origin',
-  keywords: ['Navidad', 'Tutto', 'Regalos', 'Santa claus'],
+  keywords: ['San Valentín', 'Tutto', 'Regalos', 'Suéters'],
   authors: [{ name: 'Garnier BBDO' }, { name: 'Garnier BBDO', url: 'https://garnierbbdo.com' }],
   openGraph: {
-    title: 'Tutto Navidad',
-    description: 'En navidad algunos le dejan sus deseos a Santa, pero esta Navidad vos dejámelos a mí.',
-    siteName: 'Tutto navidad',
+    title: 'Tutto - San Valentín',
+    description: 'Colección de suéters robables de San Valentín',
+    siteName: 'Tutto - San Valentín',
     type: 'website',
     images: [
       {
